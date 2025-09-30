@@ -81,6 +81,8 @@ const genericTemplates = [
   "語るより歌おうよってことで、カラオケに駆け込む準備はいい？"
 ];
 
+const APP_URL = "https://negishimoe.github.io/karaoke-invite-maker/";
+
 function pickTemplate(input) {
   if (!input) {
     return "まずは一言教えて！その瞬間を歌に変えて誘うから。";
@@ -133,7 +135,8 @@ function shareOnX() {
   const text = document.getElementById("outputText").textContent;
   if (!text || text.includes("まだ誘い待ち")) return;
 
-  const url = `https://twitter.com/intent/tweet?text=${encodeURIComponent(`${text}\n#強引カラオケお誘いメーカー`)}`;
+  const payload = `${text}\n${APP_URL}\n#強引カラオケお誘いメーカー`;
+  const url = `https://twitter.com/intent/tweet?text=${encodeURIComponent(payload)}`;
   window.open(url, "_blank", "noopener");
 }
 
