@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>強引カラオケお誘いメーカー</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app">
+    <header>
+      <h1>強引カラオケお誘いメーカー</h1>
+      <p>日常のひと言を、カラオケへの誘い文句に変換します。</p>
+    </header>
+
+    <section class="input-card">
+      <label for="dailyInput">今日の出来事や今していることを教えてください</label>
+      <textarea id="dailyInput" rows="3" placeholder="例：ネトフリ見てた"></textarea>
+      <button id="generateButton">誘ってもらう</button>
+    </section>
+
+    <section class="output-card" aria-live="polite">
+      <h2>お誘いメッセージ</h2>
+      <p id="outputText" class="placeholder">まだ誘い待ちです…ボタンを押してみてください。</p>
+      <div class="cta-group">
+        <button id="copyButton" class="secondary" hidden>コピーする</button>
+        <button id="shareButton" class="secondary" hidden>Xでシェア</button>
+      </div>
+    </section>
+
+    <footer>
+      <p>友だちに送るのもよし、自分でニヤニヤするのもよし。</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
